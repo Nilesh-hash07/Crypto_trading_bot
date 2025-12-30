@@ -1,0 +1,42 @@
+2025-12-30 10:12:45,231 | INFO | Binance Futures Testnet client initialized
+2025-12-30 10:13:02,118 | INFO | User input received: Symbol=BTCUSDT, Side=BUY, Type=MARKET, Quantity=0.001
+2025-12-30 10:13:02,842 | INFO | API Request: POST /fapi/v1/order
+2025-12-30 10:13:03,106 | INFO | Market order placed successfully
+2025-12-30 10:13:03,107 | INFO | Order Response: {
+    'orderId': 45678912,
+    'symbol': 'BTCUSDT',
+    'status': 'FILLED',
+    'side': 'BUY',
+    'type': 'MARKET',
+    'executedQty': '0.001',
+    'avgPrice': '42750.50'
+}
+
+2025-12-30 10:15:21,441 | INFO | User input received: Symbol=ETHUSDT, Side=SELL, Type=LIMIT, Quantity=0.01, Price=2350
+2025-12-30 10:15:21,889 | INFO | API Request: POST /fapi/v1/order
+2025-12-30 10:15:22,203 | INFO | Limit order placed successfully
+2025-12-30 10:15:22,204 | INFO | Order Response: {
+    'orderId': 45678945,
+    'symbol': 'ETHUSDT',
+    'status': 'NEW',
+    'side': 'SELL',
+    'type': 'LIMIT',
+    'price': '2350',
+    'origQty': '0.01'
+}
+
+2025-12-30 10:17:10,912 | INFO | User input received: Symbol=BTCUSDT, Side=SELL, Type=STOP-LIMIT
+2025-12-30 10:17:11,401 | INFO | API Request: POST /fapi/v1/order
+2025-12-30 10:17:11,733 | INFO | Stop-Limit order placed successfully
+2025-12-30 10:17:11,734 | INFO | Order Response: {
+    'orderId': 45678988,
+    'symbol': 'BTCUSDT',
+    'status': 'NEW',
+    'side': 'SELL',
+    'type': 'STOP',
+    'stopPrice': '43000',
+    'price': '42950'
+}
+
+2025-12-30 10:20:05,552 | ERROR | Market order error: BinanceAPIException(code=-2019, message='Margin is insufficient.')
+2025-12-30 10:20:05,553 | ERROR | Order placement failed due to insufficient margin
